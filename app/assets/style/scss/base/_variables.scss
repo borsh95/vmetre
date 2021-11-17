@@ -1,0 +1,39 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~
+VARIABLES
+~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+$color-black: #000;
+$color-yellow: #ffff00;
+$color-gray--light: #f3f3f3;
+$color-gray: #e5e5e5;
+$color-gray--dark: #d9d9d9;
+$color-gray--darken: #c6c6c6;
+
+$color-primary: $color-yellow;
+$color-secondary: $color-yellow;
+
+:root {
+	/*font-family*/
+	--fm-1: "MuseoModerno", sans-serif;
+	--fm-2: "Aria", sans-serif;
+
+	/*pallete*/
+	--basic-black: #000;
+	--basick-white: #fff;
+	--color-primary: #{$color-primary};
+	--color-secondary: #{$color-secondary};
+	--color-primary: #{$color-black};
+
+	--color-text: var(--basic-black);
+}
+
+//breakpoints
+$desctop: 1920;
+$desctop-mid: 1450;
+$desctop-min: 1230;
+$table: 1024;
+$mobile: 768;
+$tel: 480;
+
+/***********************Main*/
+$duration: 0.3s;

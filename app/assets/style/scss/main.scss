@@ -1,0 +1,74 @@
+@import "fonts";
+@import "./base/variables";
+@import "./mixsins/mixsins";
+@import "./base/nullstyle";
+@import "./base/settings";
+@import "./components/btns";
+@import "./base/grid";
+@import "./base/typography";
+@import "./base/typography";
+@import "./components/atoms";
+@import "./components/interface";
+@import "./components/molecules";
+
+html,
+body {
+	font-family: var(--fm-1);
+	font-size: 16px;
+	font-weight: 400;
+	color: var(--color-text);
+}
+
+body {
+	height: 1px;
+	min-height: 100vh;
+	scrollbar-color: var(--scroll-thumb-color) var(--scroll-bar-color); /* «цвет ползунка» «цвет полосы скроллбара» */
+	scrollbar-width: thin; /* толщина */
+}
+
+::-webkit-scrollbar {
+	width: 0.6rem;
+	height: 0.6rem;
+	background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: var(--color-primary);
+	border-radius: 0.5em;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: lighten($color-primary, 10%);
+}
+
+.global-wrap {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+/*--------------------------------Common--------------------------------*/
+.container {
+	margin-right: auto;
+	margin-left: auto;
+	width: 100%;
+	max-width: 1170px;
+
+	@include table {
+		padding-right: 20px;
+		padding-left: 20px;
+		max-width: 768px;
+	}
+
+	@include mobile {
+		padding-right: 10px;
+		padding-left: 10px;
+		max-width: 100%;
+	}
+}
+
+@import "./components/blocks";
+@import "./components/header";
+@import "./components/footer";
+
+/*--------------------------------Other--------------------------------*/

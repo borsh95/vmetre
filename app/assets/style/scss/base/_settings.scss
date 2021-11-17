@@ -1,0 +1,50 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~ ОБЩИЕ СТИЛИ ~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.flex {
+	display: flex;
+}
+
+.flex-wrap {
+	@extend .flex;
+	flex-wrap: wrap;
+}
+
+/*Общие стили сетки*/
+.vt-center {
+	@extend .flex;
+	align-items: center;
+}
+
+.gt-center {
+	@extend .flex;
+	justify-content: center;
+}
+
+.flex-col {
+	display: flex;
+	flex-direction: column;
+}
+
+.for-table {
+	display: none;
+
+	@include table {
+		display: block;
+	}
+}
+
+.fit-cover {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+.fit-contain {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	object-position: center;
+}
+
+.color-primary {
+	color: var(--color-primary);
+}

@@ -1,0 +1,53 @@
+@mixin desctop {
+	@media (max-width: #{$desctop}px) {
+		@content;
+	}
+}
+
+@mixin desctop-mid {
+	@media (max-width: #{$desctop-mid}px) {
+		@content;
+	}
+}
+
+@mixin desctop-min {
+    @media (max-width: #{$desctop-min}px) {
+        @content;
+    }
+}
+
+@mixin table {
+    @media (max-width: #{$table}px) {
+        @content;
+    }
+}
+
+@mixin table-min {
+	@media (min-width: #{$table + 1}px) {
+		@content;
+	}
+}
+
+@mixin mobile {
+    @media (max-width: #{$mobile}px) {
+        @content;
+    }
+}
+
+@mixin tel {
+    @media (max-width: #{$tel}px) {
+        @content;
+    }
+}
+
+@function rubberSize($minW, $maxW, $minScrin, $maxScrin) {
+	@return calc(#{$minW}px + (#{$maxW} - #{$minW})*((100vw - #{$minScrin}px)/(#{$maxScrin} - #{$minScrin})));
+}
+
+@function getEm($childSize, $parentSize) {
+	@return #{$childSize/$parentSize}em;
+}
+
+@function getPr($childSize, $parentSize) {
+	@return #{$childSize/$parentSize*100%};
+}	
